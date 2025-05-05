@@ -1,0 +1,15 @@
+# Core web framework
+fastapi
+
+# ASGI server for FastAPI
+uvicorn[standard]
+
+# For making HTTP requests (to AnkiConnect, LLM APIs if needed)
+requests
+
+# For loading environment variables from .env file
+python-dotenv
+
+# For fetching YouTube transcripts
+youtube-transcript-api
+
