@@ -4,6 +4,9 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from typing import List, Optional, Tuple
 import json # Import json for logging dicts
 import traceback # Import traceback for detailed stack trace
+from dotenv import load_dotenv
+import os
+import requests
 
 # Import project modules using absolute paths from src
 from .config import settings
@@ -16,6 +19,12 @@ from .models import (
 from .processing import get_sentence_pairs_and_add_to_anki
 from .anki import add_notes_to_anki, check_connection # Keep check_connection
 from .youtube import extract_video_id, get_transcript_text # Added YouTube import
+
+# Load environment variables
+load_dotenv()
+
+# Get the timeout value (default to 120 if not set)
+timeout = int(os.getenv('VLLM_REQUEST_TIMEOUT', 120))
 
 # --- FastAPI App Initialization ---
 app = FastAPI(
