@@ -134,4 +134,4 @@ Please ensure your code follows existing style conventions and includes tests fo
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. *(Ensure you have a LICENSE file in your repository)*
+This project is licensed under the MIT License.
